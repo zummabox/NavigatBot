@@ -248,37 +248,6 @@ async def process_back_button(callback_query: types.CallbackQuery, state: FSMCon
         # Если предыдущего состояния нет, сообщаем об этом пользователю
         await callback_query.message.answer('Предыдущего состояния нет.')
 
-
-    # current_state = await state.get_state()
-    #
-    # if current_state == AddDetail.category:
-    #     await callback.message.answer(
-    #         'Предидущего шага нет, введите название детали или напишите "отмена"'
-    #     )
-    #     return
-    #
-    # previous = None
-    # for step in AddDetail.__all_states__:
-    #     if step.state == current_state:
-    #         if previous is not None:
-    #             await state.set_state(previous)
-    #             text_to_send = AddDetail.texts.get(f"AddDetail:{previous}")
-    #             if text_to_send is not None:
-    #                 await callback.message.edit_text(text=text_to_send)
-    #                 await callback.message.answer(
-    #                     f"Вы вернулись к прошлому шагу \n {text_to_send}"
-    #                 )
-    #             else:
-    #                 # Обработка случая, когда текст для предыдущего состояния отсутствует
-    #                 await callback.message.answer("Текст для предыдущего шага не найден.")
-    #             return
-    #         else:
-    #             # Обработка случая, когда предыдущего состояния нет
-    #             await callback.message.answer("Предидущего шага нет.")
-    #             return
-    #     previous = step
-
-
 #########################################################################################
 
 
